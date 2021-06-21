@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>LOGIN REGISTRATION FORM</title>    
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+    /**/
+    function validate()
+    {
+    var username = document.getElementById("uname");
+    var password = document.getElementById("pass");
+        
+        if(username.value =="" ||password.value =="")
+            {
+                alert("No Blank Values Allowed");
+                return false;   
+            }
+        else
+        {
+         true;    
+        }
+    }
+        function val()
+        {
+               var username = document.getElementById("unamee");
+               var password = document.getElementById("passs");
+               var email = document.getElementById("Email");
+             if(username.value =="" ||password.value =="" ||email.value =="")
+            {
+                alert("No Blank Values Allowed"); 
+                return false;
+            }
+        else
+        {
+         true;    
+        }
+        }
+        </script>
+</head>
+    <body>
+    <div class="loginpage">
+         
+        <div class="form">
+             <form onsubmit="return validate()" class="loginform" action="wecome.html">
+             <input id="uname" placeholder="username" type="text"/>
+            <input id="pass" placeholder="password" type="password"/>
+               <button type="submit">Login</button>
+              <p class="message">If you are Not Registered?<a href="#">  Register</a></p>
+                
+            </form>
+            
+        <form onsubmit="return val()" class="regform">
+          <input id="unamee" placeholder="username" type="text"/>
+            <input id="passs" placeholder="password" type="password"/>
+            <input id="Email" placeholder="Email" type="email"/>
+             <button type="submit">Create</button>
+            <p class="message">If you are already Registered?<a href="#">  Login</a></p>
+            </form>
+           
+           
+        </div>
+    </div>
+     <script src='https://code.jquery.com/jquery-3.2.1.min.js'> </script>  
+       <script>
+        $('.message a').click(function(){
+            $('form').animate({height:"toggle", opacity:"toggle"},"slow");
+        });
+        </script> 
+    </body>
+</html>
